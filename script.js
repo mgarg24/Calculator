@@ -56,10 +56,10 @@ document.querySelectorAll('#operator').forEach(item => {
 
         
         }
-        else if (total !='')
+        else if (total !='' && operator ===''){
 
         display.innerHTML = display.innerHTML + item.textContent;
-        operator = item.textContent;
+        operator = item.textContent;}
 
 
     });
@@ -153,7 +153,19 @@ document.querySelector(".delete").addEventListener('click', ()=>{
 
    
 });
+let char =''
 
+document.querySelector(".decimal").addEventListener('click', ()=>{
+
+    char =display.innerHTML.charAt(display.innerHTML.length-1);
+    
+
+    if(char === '+' || char === '-' || char === 'x' || char === '÷' ) {
+
+        alert("doofus");
+    }
+
+});
 
 
 function sum(a,b){
